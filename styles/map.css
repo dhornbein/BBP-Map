@@ -41,30 +41,36 @@ body {
 	overflow-y: hidden;
 	box-sizing: border-box;
 	max-width: 30%;
+	min-width: 390px;
 }
 
 .content {
 	display: none;
-	padding: 2.5em;
+	padding: 2.5rem 1.5rem 1.5rem;
 	color: var(--color-purple);
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 70vh;
+	min-height: 80vh;
+	max-height: 100vh;
 }
 
 .content__states {
     border-bottom: solid 2px var(--color-orange);
-    font-size: 2rem;
-    text-transform: uppercase;
+    margin-bottom: 0.9rem;
 }
-.content__title {
-    font-size: 3.5rem;
-    text-transform: uppercase;
+.content__title {}
+.content__text {
+    flex: 0 1 auto;
+    overflow-y: auto;
+    margin: 1rem 0;
 }
-.content__text {}
+
+.content__text p:first-child { margin-top: 0;}
+.content__text p:last-child { margin-bottom: 0;}
 
 .content .button {
+    display: inline-block;
     width: auto;
 }
 
@@ -73,8 +79,6 @@ body {
     border-radius: var(--border-radius);
     color: #fff;
     padding: 0.5em;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
 .content.active {
@@ -115,10 +119,7 @@ body {
 	border-radius: var(--border-radius);
 	color: var(--color-btn-fg);
 	text-align: center;
-	font-size: 1.5rem;
 	padding: .5rem 0;
-	line-height: 1.5rem;
-	text-transform: uppercase;
 	transition: all .3s ease;
 }
 	.map__button.hover,
@@ -135,8 +136,6 @@ body {
 		color: var(--color-btn-active-fg);
 	}
 
-div#btn-3 {}
-
 /* ==================================== STATES ===== */
 	.state-of-interest path { 
 		fill: var(--color-state-bg);
@@ -148,8 +147,17 @@ div#btn-3 {}
 		fill: var(--color-state-hover-bg);}
 	.state-of-interest.active path { fill: var(--color-state-active-bg); }
 
-	
 
+/* ==================================== MEDIA ===== */
 
-
-
+@media (max-width: 800px) {
+	.map__button-box {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2.5rem;
+	}
+	.map__button {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}

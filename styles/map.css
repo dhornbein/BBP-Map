@@ -160,4 +160,7 @@ body {
 		width: 100%;
 		margin-bottom: 1rem;
 	}
+	.map svg {
+		height: unset;
+	}
 }

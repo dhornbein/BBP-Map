@@ -119,7 +119,7 @@ body {
 	padding: .5rem 0;
 	line-height: 1.5rem;
 	text-transform: uppercase;
-	transition: all .4s ease;
+	transition: all .3s ease;
 }
 	.map__button.hover,
 	.map__button:hover {
@@ -140,7 +140,7 @@ div#btn-3 {}
 /* ==================================== STATES ===== */
 	.state-of-interest path { 
 		fill: var(--color-state-bg);
-		transition: fill .4s ease;
+		transition: fill .3s ease;
 	}
 	.state-of-interest.hover path,
 	.state-of-interest:hover path {

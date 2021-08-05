@@ -79,6 +79,13 @@ body {
     border-radius: var(--border-radius);
     color: #fff;
     padding: 0.5em;
+    transition: background .3s ease-in;
+}
+
+.button:hover,
+.button:active {
+    color: var(--color-btn-active-fg);
+    background-color: var(--color-purple);
 }
 
 .content.active {

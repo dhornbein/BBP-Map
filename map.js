@@ -6,6 +6,8 @@ const nebraska   = document.getElementById("nebraska");
 const louisiana  = document.getElementById("louisiana");
 const florida    = document.getElementById("florida");
 
+const title      = document.getElementById("cont-0");
+
 let issues = {
     1: {
         "active":false,
@@ -93,6 +95,7 @@ function issueClick(issue) {
     switchIssue(issue);
     deactivateIssue();
     if (issue.active) activateIssue(issue);
+    toggleTitle();
 }
 
 function actOnIssue(callback) {
@@ -143,3 +146,17 @@ function activateIssue(issue) {
     issue.cont.classList.toggle(classActive);
     issue.btn.classList.toggle(classActive);
 }
+
+// loop through issues hide title if active, display if not
+function toggleTitle() {
+    let isActive = false;
+    actOnIssue(function(issue,i){
+        if (issue.active) isActive = true;
+    });
+    if (isActive) {
+        title.classList.remove(classActive);
+    } else {
+        title.classList.add(classActive);
+    }
+}
+

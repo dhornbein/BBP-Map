@@ -287,6 +287,9 @@ body {
 	.map svg {
 		height: unset;
 	}
+	.map {
+		flex: 0 1 auto;
+	}
 }
 
 /* BUTTON CODE */
